@@ -13,10 +13,10 @@ jobs:
 
     steps:
     - name: Checkout the repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       
     - name: Use Node.js v20.x
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: 20.x
         cache: 'npm'
@@ -32,6 +32,9 @@ jobs:
 
     - name: Run UI tests
       run: npm run test:ui
+
+    - name: Run Unit tests
+      run: npm run test:unit
       
     - name: Display SoftUni username
       run: echo "deyan2306"
